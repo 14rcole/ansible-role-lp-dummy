@@ -24,7 +24,7 @@
 - name: "Fail when auth_var is null"
   fail:
     msg: "Auth var not set"
-  when: res_grp['credentials'] is defined and auth_var == ""
+  when: res_grp['credentials'] is defined and auth_var | length == 0
 
 - name: "provisioning resource definitions of current group"
   include: provision_res_defs.yml res_def={{ res_item.0 }} res_grp_name={{ res_item.1 }}
