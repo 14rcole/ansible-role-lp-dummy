@@ -22,4 +22,3 @@
 - name: "Append outputitem to topology_outputs"
   set_fact:
     topology_outputs_dummy: "{{ topology_outputs_dummy + tmp }}"
-
